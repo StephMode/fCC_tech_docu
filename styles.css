@@ -1,0 +1,132 @@
+html {
+  font-family: sans-serif;
+  line-height: 1.25;
+  height: 100%;
+}
+
+/* für smoothes scrolling */
+
+
+/* @media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+} */
+
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+    margin: 0 auto;
+    box-sizing: border-box;
+    line-height: 1.5;
+  }
+  
+  #wrapper {
+    justify-content: left;
+    margin: 0 auto;
+    display: flex;
+  }
+  
+  
+  #navbar {
+    flex: 1.4;
+    width: 180px;
+    padding: 15px;
+    height: auto;
+    background-color: whitesmoke;
+    border-right: 1.5px solid black;
+    
+    
+  }
+  
+  #navbar ul {
+    list-style: none;
+    padding-left: 0;
+    position: sticky;
+    top:0;
+    z-index: 1000;
+    
+  }
+
+  #navbar li {
+    margin: 15px 0;
+    padding: 5px 0;
+    font-weight: 700;
+  }
+  
+  /* für das Styling meiner anchors aka Menupünkte in Navbar */
+
+  a:link {
+    color: black;
+    text-decoration: none;
+    
+  }
+
+  a:visited {
+    color: black;
+    text-decoration: none;
+
+  }
+
+  #heading {
+    font-weight: bold;
+    font-size: 3em;
+   margin-bottom: 15px;
+  }
+
+  #main-doc {
+    flex: 5;
+    margin: 0 10px;
+    padding: 15px;
+
+    
+  }
+
+  section {
+    margin-bottom: 35px;
+  }
+
+header {
+  font-size: 20px;
+}
+
+  code {
+    background-color: lightgrey;
+    border: 0.5px solid black;
+  }
+  
+  @media (max-width: 4000px) and (min-width: 992px) {
+    #wrapper {
+      max-width: 992px;
+    
+    }
+  }
+
+  @media (max-width: 700px) {
+    #wrapper {
+      display: flex;
+      flex-direction: column;
+      /* justify-content brauche ich scheinbar nicht */
+      justify-content: center;
+    }
+    #navbar {
+      width: 100%;
+      /* mit diesen properties konnte ich die navbar schließlich am oberen Seitenrand kleben lassen unter Verwendung des flexbox modells */
+      flex-shrink: 0;
+      position: sticky;
+      top:0;
+      z-index: 1000;
+    }
+
+    main {
+      width: auto;
+      
+    }
+
+
+  
+  }
